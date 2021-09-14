@@ -1,0 +1,93 @@
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+		<link rel="stylesheet" href="./style.css"/>
+	</head>
+	<body>
+		
+		<div id="menu">
+			<div id="blocker">
+				<div id="instructions">
+					<input id="playGameButton" class="menuBotton" type="button" value="START">
+					<br />
+					(W,A,S,D = Move, SPACE = Jump, SHIFT = Run, MOUSE = Look, V = Change Camera)
+					<br/>
+					<br/>
+					<input id="settingsButton" class="menuBotton" type="button" value="SETTINGS">
+				</div>
+			</div>
+		</div>
+		
+		<div id="game">
+			<div id="loading">
+				<img id="LoadingGif" src="resources/images/Spinner.gif">
+			</div>
+			<div id="gameCanvas">
+				<canvas id="canvas"></canvas>
+				
+				<div id="PauseCanvas">
+					<input id="resumeButton" class="menuBotton" type="button" value="RESUME">
+					<span></span>
+					<input id="backToMenuButton" onclick="window.location.href='./'" class="menuBotton" type="button" value="BACK TO MENU">
+				</div>
+			</div>
+		</div>
+		
+		<div id="settings">
+        <div id="MainSett">
+            <span id="exitSettings">🡸 BACK</span>
+            <div class="settingElem">
+                <h1 class="titleElement">Settings:</h1>
+				
+                <table id="otherSettingsTable">
+                        <td><span>Mouse sensibility:</span></td>
+                        <td><span> 1 </span></td>
+                        <td><input id="sliderMouseSens" class="sliderSetting" type="range" min="0.5" max="1.5" value="1" step="0.1"></td>
+                        <td><span> 100</span></td>
+                    </tr>
+                  
+                    <tr>
+                        <td><span>Gravity:</span></td>
+                        <td><span> -15 </span></td>
+                        <td><input id="sliderGravity" class="sliderSetting" type="range" min="-15" max="-5" value="-8" step="1"></td>
+						 <td><span> -5 </span></td>
+                    </tr>
+					 <tr>
+                        <td><span>Number of aliens:</span></td>
+                        <td><span> 0 </span></td>
+                        <td><input id="sliderAlien" class="sliderSetting" type="range" min="0" max="20" value="10" step="1"></td>
+						 <td><span> 20 </span></td>
+                    </tr>
+					<tr>
+                        <td colspan="2">
+                            <button id = "nightON">Set night as time</button>
+                        </td>
+                    </tr>
+					<tr>
+                        <td colspan="2">
+                            <button id = "changePlanet">Change planet</button>
+                        </td>
+                    </tr>
+					<tr>
+                        <td colspan="1">
+                            <button id = "changeSkin">Change skin</button>
+                        </td>
+                    </tr>
+                </table>
+                <div id="divBtnSettings">
+                    <span id="confirmSettings" class="btnSettings">Save changes</span>
+                    <span id="resetSettings" class="btnSettings">Reset settings</span>
+                </div>
+            </div>
+        </div>
+		</div>
+		
+		<script src="js/extraLibraries/three.js"></script>
+		<script src="js/extraLibraries/cannon.js"></script>
+		<script src="js/extraLibraries/GLTFLoader.js"></script>
+		<script src="js/extraLibraries/tween.umd.js"></script>
+		
+		<script type="module" src="main.js"></script>
+		
+	</body>
+</html>
