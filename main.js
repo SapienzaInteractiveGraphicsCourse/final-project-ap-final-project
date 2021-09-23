@@ -290,8 +290,10 @@ class gameEnvironment {
 
 	//Draw Scene
 	render() {
-		if(this.activeCamera==0)
+		if(this.activeCamera==0){
 			this.renderer.render( this.scene, this.camera );
+			
+		}
 		else if(this.activeCamera==1)
 			this.renderer.render( this.scene, this.camera2 );
 		else
@@ -313,6 +315,8 @@ class gameEnvironment {
 	init() {
 		//fps camera
 		this.camera = new THREE.PerspectiveCamera( 100, window.innerWidth / window.innerHeight, 0.15, 1000 );
+		if(MANAGER.getSkin()==true)
+				this.camera.position.y+=1.5;
 		//tps camera
 		this.camera2 = new THREE.PerspectiveCamera( 80, window.innerWidth / window.innerHeight, 0.1, 1000 );
 		this.camera2.translateY(4);
@@ -385,7 +389,10 @@ class gameEnvironment {
 			
 	
 		//Add character
-		var playerStartPosition = [0, 2.0, 0];
+		if(MANAGER.getSkin()==false)
+			var playerStartPosition = [0, 2.0, 0];
+		else
+			var playerStartPosition = [0, 4.0, 0];
 		this.playerEntity = this.entityManager.addEntityAndReturn({name: EntityManager.ENTITY_PLAYER, position: playerStartPosition})
 		this.entityManager.setPlayer(this.playerEntity);
 		this.controls = new CharacterController({manager: MANAGER, entity: this.playerEntity, camera: this.camera, camera2:this.camera2});	

@@ -125,10 +125,10 @@ export class  AlienFactory{
 		new THREE.MeshPhongMaterial({color: 0x008000}),
 		new THREE.MeshPhongMaterial({color: 0x008000}),
 		new THREE.MeshPhongMaterial({color: 0x008000}),
-		new THREE.MeshPhongMaterial({color: 0x000000})]
+		new THREE.MeshPhongMaterial({map: new THREE.TextureLoader().load('resources/images/alieno.png')})]
 		var mesh = new THREE.Mesh(boxGeometry, cubeMaterials);
 		mesh.castShadow = true;
-		mesh.position.set(x,y,z);
+		mesh.position.set(x,y+1.0,z);
 		return mesh;
 	}
 	getMesh() {

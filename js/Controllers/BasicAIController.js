@@ -1,6 +1,6 @@
 import {CharacterFactory} from './../CharacterFactory.js';
 
-export class BasicAIController {
+export class BasicAIienController {
 	constructor(params) {
 		this.MANAGER = params.manager
 		this.target = params.target;

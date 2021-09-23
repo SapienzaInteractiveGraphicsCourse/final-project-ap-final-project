@@ -1,5 +1,5 @@
 import {CharacterController} from './Controllers/CharacterController.js';
-import {BasicAIController} from './Controllers/BasicAIController.js';
+import {BasicAIienController} from './Controllers/BasicAIController.js';
 import {CharacterFactory} from './CharacterFactory.js';
 import {AlienFactory} from './AlienFactory.js'
 export class EntityManager{
@@ -166,7 +166,7 @@ class alienEntity extends Entity{
 		this.maxDistance = params.maxDistance;
 		this.character = params.character;
 		this.randomDestination=params.randomDestination;
-		this.controls = new BasicAIController({
+		this.controls = new BasicAIienController({
 			manager: this.MANAGER,
 			character: this.character,
 			entity: this,

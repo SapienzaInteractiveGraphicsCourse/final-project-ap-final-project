@@ -61,7 +61,7 @@ body {
 }
 
 .menuBotton{
-    background: var(--yellow);
+    background: var(--white);
     color: var(--grey);
     cursor: pointer;
     font-size: 38px;

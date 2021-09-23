@@ -162,7 +162,7 @@ export class CharacterFactory {
 		new THREE.MeshPhongMaterial({color: 0x8D7575}),
 		new THREE.MeshPhongMaterial({color: 0x8D7575}),
 		new THREE.MeshPhongMaterial({color: 0x8D7575}),
-		new THREE.MeshPhongMaterial({color: 0x000000}), //dietro
+		new THREE.MeshPhongMaterial({map: new THREE.TextureLoader().load('resources/images/bodyDietro.png'), side:THREE.DoubleSide}), //dietro
 		new THREE.MeshPhongMaterial({map: new THREE.TextureLoader().load('resources/images/bodyDavanti.png'), side:THREE.DoubleSide})] //davanti
 		var mesh = new THREE.Mesh(boxGeometry, cubeMaterials);
 		mesh.castShadow = true;
