@@ -1,5 +1,5 @@
 import {CharacterController} from './Controllers/CharacterController.js';
-import {BasicAIienController} from './Controllers/BasicAIController.js';
+import {BasicAIienController} from './Controllers/BasicAIienController.js';
 import {CharacterFactory} from './CharacterFactory.js';
 import {AlienFactory} from './AlienFactory.js'
 export class EntityManager{
